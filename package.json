@@ -1,0 +1,16 @@
+{
+  "name": "express-redirect",
+  "description": "Flexible redirection plugin",
+  "version": "1.0.0",
+  "author": "Jan Buschtöns <buschtoens@gmail.com>",
+  "contributors": [ 
+    { "name": "Jan Buschtöns", "email": "buschtoens@gmail.com", "url": "https://github.com/silvinci" }
+  ],
+  "license": "MIT",
+  "keywords": ["express", "connect", "redirect", "redirection", "rewrite", "middleware", "plugin"],
+  "repository": "git://github.com/silvinci/express-redirect",
+  "main": "index",
+  "engines": { "node": "*" },
+  "scripts": { "prepublish": "npm prune", "test": "mocha -R spec -r should" },
+  "devDependencies": { "mocha": "~1.7.3", "should": "~1.2.1" }
+}
