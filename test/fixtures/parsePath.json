@@ -1,0 +1,63 @@
+[
+	{
+		"test": "simple path without parameters"
+	, "should": "return no keys and a flattened path"
+	, "path": "/lorem/ipsum/dolor/sit.amet"
+	, "keys": []
+	, "elements": ["/lorem/ipsum/dolor/sit.amet"]
+	}
+, {
+		"test": "path with variables"
+	, "should": "return the keys and a path"
+	, "path": "/lorem/:ipsum/dolor/:sit.amet"
+	, "keys": [
+			{
+				"name": "ipsum"
+			, "optional": false
+			, "def": false
+			}
+		, {
+				"name": "sit"
+			, "optional": false
+			, "def": false
+			}
+		]
+	, "elements": ["/lorem", "/dolor", ".amet"]
+	}
+, {
+		"test": "path with optional variables"
+	, "should": "return the keys with optional tag and a path"
+	, "path": "/lorem/:ipsum?/dolor/:sit.amet"
+	, "keys": [
+			{
+				"name": "ipsum"
+			, "optional": true
+			, "def": false
+			}
+		, {
+				"name": "sit"
+			, "optional": false
+			, "def": false
+			}
+		]
+	, "elements": ["/lorem", "/dolor", ".amet"]
+	}
+, {
+		"test": "path with defaulting variables"
+	, "should": "return the keys with their defaults and a path"
+	, "path": "/lorem/:ipsum(lorem)/dolor/:sit.amet"
+	, "keys": [
+			{
+				"name": "ipsum"
+			, "optional": false
+			, "def": "lorem"
+			}
+		, {
+				"name": "sit"
+			, "optional": false
+			, "def": false
+			}
+		]
+	, "elements": ["/lorem", "/dolor", ".amet"]
+	}
+]
