@@ -11,9 +11,8 @@ describe("parsePath(path)", fixtures.forEach.bind(fixtures, function(testcase) {
 			var parsed = parsePath(testcase.path);
 			
 			// JSON undefined polyfill
-			for(var key in testcase.keys) {
+			for(var key in testcase.keys)
 				if("def" in testcase.keys[key]) testcase.keys[key].def = testcase.keys[key].def || undefined;
-			}
 			
 			parsed
 				.should.be.a("object")
