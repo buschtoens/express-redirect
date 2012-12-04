@@ -12,5 +12,5 @@
   "main": "index",
   "engines": { "node": "*" },
   "scripts": { "prepublish": "npm prune", "test": "mocha -R spec -r should" },
-  "devDependencies": { "mocha": "~1.7.3", "should": "~1.2.1" }
+  "devDependencies": { "mocha": "~1.7.3", "should": "~1.2.1", "express": "~3" }
 }
