@@ -1,0 +1,77 @@
+[
+	{
+		"test": "simple paths without parameters"
+	, "should": "return no keys and a flattened path"
+	, "route": "/lorem/ipsum/dolor/sit.amet"
+	, "target": "/abcd/efgh/ijk"
+	, "keys": []
+	, "elements": "/abcd/efgh/ijk"
+	}
+, {
+		"test": "paths with variables"
+	, "should": "strip unused keys, return the keys and a path"
+	, "route": "/lorem/:ipsum/dolor/:sit.amet"
+	, "target": "/lorem/:sit/dolor"
+	, "keys": [
+			{
+				"name": "sit"
+			, "optional": false
+			, "def": false
+			}
+		]
+	, "elements": ["/lorem", "/dolor"]
+	}
+, {
+		"test": "paths with optional variables"
+	, "should": "return the keys with optional tag and a path"
+	, "route": "/lorem/:ipsum/dolor/:sit.amet"
+	, "target": "/lorem/:ipsum?/dolor/:sit?"
+	, "keys": [
+			{
+				"name": "ipsum"
+			, "optional": true
+			, "def": false
+			},
+			{
+				"name": "sit"
+			, "optional": true
+			, "def": false
+			}
+		]
+	, "elements": ["/lorem", "/dolor"]
+	}
+, {
+		"test": "paths with defaulting variables"
+	, "should": "return the keys with defaults and a path"
+	, "route": "/lorem/:ipsum/dolor/:sit.amet"
+	, "target": "/lorem/:ipsum(pescit)/dolor/:sit"
+	, "keys": [
+			{
+				"name": "ipsum"
+			, "optional": false
+			, "def": "pescit"
+			},
+			{
+				"name": "sit"
+			, "optional": false
+			, "def": false
+			}
+		]
+	, "elements": ["/lorem", "/dolor"]
+	}
+, {
+		"test": "route with no variables and target with defaulting variables"
+	, "should": "compact the target, return no keys and a path"
+	, "route": "/lorem/dolor/amet"
+	, "target": "/lorem/:ipsum(pescit)/dolor/:sit(amet)"
+	, "keys": []
+	, "elements": "/lorem/pescit/dolor/amet"
+	}
+, {
+		"test": "target with non-existing, not defaulting, no-optional variables"
+	, "should": "throw a nice error"
+	, "route": "/lorem/dolor/amet"
+	, "target": "/lorem/:ipsum"
+	, "throws": true
+	}
+]
