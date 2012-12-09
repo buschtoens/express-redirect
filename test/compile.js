@@ -14,11 +14,6 @@ describe("compile(params, target)", fixtures.forEach.bind(fixtures, function(tes
 
 			if(!testcase.throws) {
 				var compiled = compile(testcase.params, target);
-
-				// JSON undefined polyfill
-				for(var key in testcase.keys)
-					if("def" in testcase.keys[key])
-						testcase.keys[key].def = testcase.keys[key].def || undefined;
 				
 				compiled
 					.should.be.a("string")
