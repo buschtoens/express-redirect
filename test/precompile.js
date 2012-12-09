@@ -14,7 +14,8 @@ describe("precompile(route, target)", fixtures.forEach.bind(fixtures, function(t
 				
 				// JSON undefined polyfill
 				for(var key in testcase.keys)
-					if("def" in testcase.keys[key]) testcase.keys[key].def = testcase.keys[key].def || undefined;
+					if("def" in testcase.keys[key])
+						testcase.keys[key].def = testcase.keys[key].def || undefined;
 				
 				precompiled
 					.should.be.a("object")
