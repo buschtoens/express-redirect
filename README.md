@@ -1,4 +1,24 @@
 # express-redirect [![Build Status](https://secure.travis-ci.org/silvinci/express-redirect.png?branch=master)](https://travis-ci.org/silvinci/express-redirect)
+**express-redirect** offers you simple and blazing fast redirection rules.
+Even very complex redirect rules don't take longer than 1 ms.
+It just comes down to concatenating strings.
+
+Say goodbye to writing 10 lines of code for a plain redirection over and over again.
+
+## Installation
+```
+$ npm install express-redirect
+```
+
+```javascript
+var express = require("express")
+  , redirect = require("express-redirect");
+
+var app = express();
+redirect(app); // mount the plugin
+```
+
+## Example
 
 ```javascript
 // just a smple redirect
@@ -25,9 +45,6 @@ app.redirect(
   "https://www.google.de/?q=:query(Nyan+Cat)"
 );
 ```
-
-**express-redirect** is *insanely* fast, as it precompiles and joins together everything it can.
-Even very complex redirect rules don't take longer than 1 ms. It just comes down to concatenating strings.
 
 ---
 
