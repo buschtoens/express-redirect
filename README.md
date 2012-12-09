@@ -46,7 +46,42 @@ app.redirect(
 );
 ```
 
----
+## API
+express-redirect mounts the new method `app.redirect(route, target, [status], [method])` to your app.
+You can access it just like `app.get()` or `app.post()` etc.
+
+### route
+The parameter `route` is a string and is required.
+It can contain parameters like `:id`, `:year([0-9]{4})?` or `:action(view|edit)`.
+It's basically just the same as a route you would pass to `app.get()`.
+
+### target
+The parameter `target` is a string and is required.
+It can contain parameters like `:id`, `:year?` or `:action(view)`,
+where a `?` marks an optional parameter and `(someString)` is a default value.  
+The parameters get replaced by their respective counterparts in the `route`.
+
+```javascript
+app.redirect("/a/:id([0-9]+)?", "/b/:id(1)");
+app.redirect("/c/:action(view|delete)?", "/d/:action?");
+```
+```
+/a           -> /b/1
+/a/100       -> /b/100
+/c           -> /d
+/c/view      -> /d/view
+```
+
+### status
+The parameter `status` is an integer and is optional.
+It is a [HTTP (redirection) status code](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection).
+It defaults to [`307` (Temporary Redirect)](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#307).
+
+### method
+The parameter `method` is a string and is optional.
+It is a [VERB](http://expressjs.com/api.html#app.VERB) as in express' router.
+It defaults to `all`.
+
 
 ## License 
 
