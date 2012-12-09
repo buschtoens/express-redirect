@@ -18,6 +18,12 @@ app.redirect(
   "/entry/:entry/comments/:action(view|edit|delete)?/:id([0-9]+)/:reply([0-9]+)?",
   "/entry/:entry/comments/:action(view)/:id/:reply?"
 );
+
+// external redirects work too
+app.redirect(
+  "/google/:query?",
+  "https://www.google.de/?q=:query(Nyan+Cat)"
+);
 ```
 
 **express-redirect** is *insanely* fast, as it precompiles and joins together everything it can.
