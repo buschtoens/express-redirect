@@ -5,6 +5,8 @@ It just comes down to concatenating strings.
 
 Say goodbye to writing 10 lines of code for a plain redirection over and over again.
 
+If you want redirections with fancy JS expressions, you should probably check out [deviate](https://github.com/ForbesLindesay/deviate).
+
 ## Installation
 ```
 $ npm install express-redirect
