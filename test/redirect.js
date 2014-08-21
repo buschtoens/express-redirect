@@ -11,7 +11,10 @@ describe("plugin testing", function() {
 		
 		// mount express-redirect
 		describe("mount plugin", function() {
-			redirect(app);
+			it("shoul return the app", function() {
+				redirect(app).should.equal(app);	
+			});
+			
 			it("register redirect method", function() {
 				app.redirect
 					.should.be.a("function");
