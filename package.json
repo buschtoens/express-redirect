@@ -1,17 +1,41 @@
 {
   "name": "express-redirect",
   "description": "Flexible redirection plugin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Jan Buschtöns <buschtoens@gmail.com>",
-  "contributors": [ 
-    { "name": "Jan Buschtöns", "email": "buschtoens@gmail.com", "url": "https://github.com/silvinci" }
+  "contributors": [
+    {
+      "name": "Jan Buschtöns",
+      "email": "buschtoens@gmail.com",
+      "url": "https://github.com/silvinci"
+    }
   ],
   "license": "MIT",
-  "keywords": ["express", "express-plugin", "connect", "redirect", "redirection", "rewrite", "middleware", "plugin"],
+  "keywords": [
+    "express",
+    "express-plugin",
+    "connect",
+    "redirect",
+    "redirection",
+    "rewrite",
+    "middleware",
+    "plugin"
+  ],
   "repository": "git://github.com/silvinci/express-redirect",
   "main": "index",
-  "engines": { "node": "*" },
-  "scripts": { "prepublish": "npm prune", "test": "mocha -R spec -r should" },
-  "dependencies": { "sanitize-arguments": "~2.0" },
-  "devDependencies": { "mocha": "~1.7.3", "should": "~1.2.1", "express": "~3" }
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "mocha -R spec -r should"
+  },
+  "dependencies": {
+    "sanitize-arguments": "~2.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.7.3",
+    "should": "~1.2.1",
+    "express": "~3"
+  }
 }
