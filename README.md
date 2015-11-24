@@ -7,6 +7,13 @@ Say goodbye to writing 10 lines of code for a plain redirection over and over ag
 
 If you want redirections with fancy JS expressions, you should probably check out [deviate](https://github.com/ForbesLindesay/deviate).
 
+## Deprecation Notice
+
+This package isn't actively maintained anymore. It was written for express v3.x, but still 
+seems to work with express v4.x. Use it at your own risk.
+
+If you want to continue this project, ping me and I'll add you as an owner on npm.
+
 ## Installation
 ```
 $ npm install express-redirect
