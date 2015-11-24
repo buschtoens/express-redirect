@@ -1,7 +1,7 @@
 {
   "name": "express-redirect",
   "description": "Flexible redirection plugin",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Jan Buschtöns <buschtoens@gmail.com>",
   "contributors": [
     {
@@ -21,7 +21,7 @@
     "middleware",
     "plugin"
   ],
-  "repository": "git://github.com/buschtoen/express-redirect",
+  "repository": "git://github.com/buschtoens/express-redirect",
   "main": "index",
   "engines": {
     "node": "*"
