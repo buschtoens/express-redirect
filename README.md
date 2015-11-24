@@ -29,6 +29,9 @@ app.redirect("/p/:id", "/page/:id");
 // you want it permanent?
 app.redirect("/p/:id", "/page/:id", 301);
 
+// if you want to append the query string (?foo=bar)
+app.redirect("/p/:id", "/page/:id", 301, true);
+
 // no id, goto page # 1
 app.redirect("/p/:id?", "/page/:id(1)");
 
@@ -49,7 +52,7 @@ app.redirect(
 ```
 
 ## API
-express-redirect mounts the new method `app.redirect(route, target, [status], [method])` to your app.
+express-redirect mounts the new method `app.redirect(route, target, [status], [method], [qsa])` to your app.
 You can access it just like `app.get()` or `app.post()` etc.
 
 ### route
@@ -83,6 +86,10 @@ It defaults to [`307` (Temporary Redirect)](http://en.wikipedia.org/wiki/List_of
 The parameter `method` is a string and is optional.
 It is a [VERB](http://expressjs.com/api.html#app.VERB) as in express' router.
 It defaults to `all`.
+
+### qsa
+The parameter `qsa` is a boolean and is optional. It defaults to `false`.
+If set to `true`, the query string will be appended. By default, it will be discarded.
 
 
 ## License 
