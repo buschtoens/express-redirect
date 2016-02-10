@@ -1,5 +1,4 @@
-# express-redirect
-[![Build Status](https://img.shields.io/travis/buschtoens/express-redirect.svg?branch=master)](https://travis-ci.org/buschtoens/express-redirect) [![NPM Version](https://img.shields.io/npm/v/express-redirect.svg)](https://www.npmjs.org/package/express-redirect)[![gandalf](http://img.shields.io/badge/gandalf-approved-61C6FF.svg)](http://img.shields.io/badge/gandalf-approved-61C6FF.svg)
+# express-redirect [![Build Status](https://img.shields.io/travis/buschtoens/express-redirect.svg?branch=master)](https://travis-ci.org/buschtoens/express-redirect) [![NPM Version](https://img.shields.io/npm/v/express-redirect.svg)](https://www.npmjs.org/package/express-redirect) [![gandalf](http://img.shields.io/badge/gandalf-approved-61C6FF.svg)](https://www.youtube.com/watch?v=Sagg08DrO5U)
 **express-redirect** offers you simple and blazing fast redirection rules.
 Even very complex redirect rules don't take longer than 1 ms.
 It just comes down to concatenating strings.
