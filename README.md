@@ -56,6 +56,23 @@ app.redirect(
   "/google/:query?",
   "https://www.google.de/?q=:query(Nyan+Cat)"
 );
+
+// array of redirect objects
+app.multipleRedirect([
+  {
+    route: "/p/:id",
+    target: "/page/:id"
+  },
+  {
+    route: "/google/:query?",
+    target: "https://www.google.de/?q=:query(Nyan+Cat)",
+  },
+  ...
+]);
+
+// external json array of redirect objects
+var redirectList = require('./myRedirectList.json');
+app.multipleRedirect(redirectList);
 ```
 
 ## API
