@@ -1,13 +1,18 @@
 {
   "name": "express-redirect",
   "description": "Flexible redirection plugin",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "author": "Jan Buschtöns <buschtoens@gmail.com>",
   "contributors": [
     {
       "name": "Jan Buschtöns",
       "email": "buschtoens@gmail.com",
       "url": "https://github.com/buschtoens"
+    },
+    {
+      "name": "Giovanni Bruno",
+      "email": "br1giova@gmail.com",
+      "url": "https://github.com/giowe"
     }
   ],
   "license": "MIT",
