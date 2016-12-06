@@ -34,8 +34,8 @@
     "sanitize-arguments": "~2.0"
   },
   "devDependencies": {
-    "mocha": "~1.7.3",
-    "should": "~1.2.1",
-    "express": "~3"
+    "mocha": "~3.2.0",
+    "should": "~11.1.1",
+    "express": "~4.14.0"
   }
 }
